@@ -1,0 +1,283 @@
+/* HMCL/src/main/resources/assets/css/glassmorphism.css */
+
+/* ============================================
+   苹果液态玻璃效果 - Glassmorphism
+   ============================================ */
+
+.root {
+    /* 基础背景色 - 深色渐变 */
+    -laoxu-bg-start: #1a1a2e;
+    -laoxu-bg-end: #0f0f1a;
+}
+
+/* 主容器背景 - 动态渐变 */
+.glass-root {
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 100% 100%,
+        #1a1a2e,
+        #0f0f1a
+    );
+}
+
+/* ==================== 玻璃面板 ==================== */
+
+/* 毛玻璃卡片 - 核心组件 */
+.glass-card {
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-border-width: 1;
+    -fx-border-color: rgba(255, 255, 255, 0.15);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0.08, 0, 4);
+    -fx-backdrop-filter: blur(20px);
+}
+
+/* 玻璃卡片悬浮效果 */
+.glass-card:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-border-color: rgba(76, 175, 80, 0.5);
+    -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.3), 25, 0, 0, 6);
+    -fx-translate-y: -2;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* ==================== 侧边栏 ==================== */
+
+/* 玻璃侧边栏 */
+.glass-sidebar {
+    -fx-background-color: rgba(30, 30, 46, 0.6);
+    -fx-background-radius: 0 30 30 0;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-backdrop-filter: blur(15px);
+}
+
+/* 导航按钮 - 玻璃风格 */
+.glass-nav-btn {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 12;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+.glass-nav-btn:hover {
+    -fx-background-color: rgba(76, 175, 80, 0.25);
+    -fx-text-fill: white;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.4), 10, 0, 0, 0);
+}
+
+.glass-nav-btn:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* 选中的导航按钮 */
+.glass-nav-btn:selected {
+    -fx-background-color: rgba(76, 175, 80, 0.35);
+    -fx-text-fill: #4caf50;
+    -fx-font-weight: bold;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-color: #4caf50;
+}
+
+/* ==================== 启动按钮 ==================== */
+
+/* 玻璃启动按钮 - 发光效果 */
+.glass-launch-btn {
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 100% 100%,
+        rgba(76, 175, 80, 0.8),
+        rgba(56, 142, 60, 0.9)
+    );
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 1;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 30;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.5), 20, 0, 0, 5);
+}
+
+.glass-launch-btn:hover {
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 100% 100%,
+        rgba(102, 187, 106, 0.9),
+        rgba(76, 175, 80, 1)
+    );
+    -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.8), 30, 0, 0, 8);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* ==================== 游戏卡片 ==================== */
+
+/* 玻璃游戏卡片 */
+.glass-game-card {
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+    -fx-padding: 15;
+    -fx-transition: all 0.3s;
+}
+
+.glass-game-card:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-border-color: rgba(76, 175, 80, 0.5);
+    -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.3), 15, 0, 0, 4);
+    -fx-translate-y: -3;
+}
+
+/* 卡片标题 */
+.glass-card-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* 卡片描述 */
+.glass-card-desc {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(255, 255, 255, 0.6);
+}
+
+/* ==================== 版本列表 ==================== */
+
+/* 玻璃版本列表项 */
+.glass-version-item {
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-radius: 12;
+    -fx-padding: 10 15;
+    -fx-transition: all 0.2s;
+}
+
+.glass-version-item:hover {
+    -fx-background-color: rgba(76, 175, 80, 0.2);
+    -fx-translate-x: 3;
+}
+
+.glass-version-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.glass-version-type {
+    -fx-font-size: 11px;
+    -fx-text-fill: #4caf50;
+    -fx-background-color: rgba(76, 175, 80, 0.2);
+    -fx-padding: 2 8;
+    -fx-background-radius: 12;
+}
+
+/* ==================== 顶部栏 ==================== */
+
+/* 玻璃顶部栏 */
+.glass-topbar {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-backdrop-filter: blur(10px);
+    -fx-padding: 10 20;
+}
+
+/* 用户头像 */
+.glass-avatar {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 2);
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+/* ==================== 进度条 ==================== */
+
+/* 玻璃进度条 */
+.glass-progress-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10;
+}
+
+.glass-progress-bar .bar {
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(
+        from 0% 0% to 100% 0%,
+        #4caf50,
+        #8bc34a
+    );
+}
+
+/* ==================== 对话框 ==================== */
+
+/* 玻璃对话框 */
+.glass-dialog {
+    -fx-background-color: rgba(30, 30, 46, 0.9);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-border-color: rgba(255, 255, 255, 0.15);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 30, 0, 0, 10);
+    -fx-backdrop-filter: blur(25px);
+}
+
+/* ==================== 滚动条 ==================== */
+
+/* 玻璃滚动条 */
+.glass-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(76, 175, 80, 0.5);
+    -fx-background-radius: 5;
+}
+
+.glass-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: rgba(76, 175, 80, 0.8);
+}
+
+.glass-scroll .scroll-bar:vertical .track {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==================== 分隔线 ==================== */
+
+/* 玻璃分隔线 */
+.glass-separator {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-pref-height: 1;
+}
+
+/* ==================== 工具提示 ==================== */
+
+/* 玻璃工具提示 */
+.glass-tooltip {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 5 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1);
+}
+
+/* ==================== 动画效果 ==================== */
+
+/* 淡入动画 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 上浮动画 */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

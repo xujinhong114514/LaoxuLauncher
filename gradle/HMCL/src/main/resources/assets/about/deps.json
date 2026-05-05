@@ -1,0 +1,17 @@
+[
+  {
+    "title": "JavaFX",
+    "subtitle": "Java 桌面应用框架",
+    "externalLink": "https://openjfx.io/"
+  },
+  {
+    "title": "Gson",
+    "subtitle": "JSON 解析库",
+    "externalLink": "https://github.com/google/gson"
+  },
+  {
+    "title": "JFoenix",
+    "subtitle": "JavaFX  Material Design 组件库",
+    "externalLink": "http://www.jfoenix.com/"
+  }
+]
